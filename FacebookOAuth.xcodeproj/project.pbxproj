@@ -14,6 +14,11 @@
 		B3B1BF3F1B043C4C007AD6E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B1BF3E1B043C4C007AD6E1 /* Images.xcassets */; };
 		B3B1BF421B043C4C007AD6E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3B1BF401B043C4C007AD6E1 /* LaunchScreen.xib */; };
 		B3B1BF4E1B043C4C007AD6E1 /* FacebookOAuthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B1BF4D1B043C4C007AD6E1 /* FacebookOAuthTests.m */; };
+		B3B1BF5A1B043DD9007AD6E1 /* KLFacebookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B1BF591B043DD9007AD6E1 /* KLFacebookUtil.m */; };
+		B3B1BF5D1B043E84007AD6E1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1BF5C1B043E84007AD6E1 /* FBSDKCoreKit.framework */; };
+		B3B1BF611B043FC2007AD6E1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1BF5E1B043FC2007AD6E1 /* FBSDKLoginKit.framework */; };
+		B3B1BF621B043FC2007AD6E1 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1BF5F1B043FC2007AD6E1 /* FBSDKMessengerShareKit.framework */; };
+		B3B1BF631B043FC2007AD6E1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B1BF601B043FC2007AD6E1 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,12 @@
 		B3B1BF471B043C4C007AD6E1 /* FacebookOAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookOAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B1BF4C1B043C4C007AD6E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3B1BF4D1B043C4C007AD6E1 /* FacebookOAuthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookOAuthTests.m; sourceTree = "<group>"; };
+		B3B1BF581B043DD9007AD6E1 /* KLFacebookUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLFacebookUtil.h; sourceTree = "<group>"; };
+		B3B1BF591B043DD9007AD6E1 /* KLFacebookUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLFacebookUtil.m; sourceTree = "<group>"; };
+		B3B1BF5C1B043E84007AD6E1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B3B1BF5E1B043FC2007AD6E1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B3B1BF5F1B043FC2007AD6E1 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		B3B1BF601B043FC2007AD6E1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B1BF631B043FC2007AD6E1 /* FBSDKShareKit.framework in Frameworks */,
+				B3B1BF611B043FC2007AD6E1 /* FBSDKLoginKit.framework in Frameworks */,
+				B3B1BF621B043FC2007AD6E1 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				B3B1BF5D1B043E84007AD6E1 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 		B3B1BF301B043C4C007AD6E1 /* FacebookOAuth */ = {
 			isa = PBXGroup;
 			children = (
+				B3B1BF571B043D5C007AD6E1 /* OAuth */,
 				B3B1BF351B043C4C007AD6E1 /* AppDelegate.h */,
 				B3B1BF361B043C4C007AD6E1 /* AppDelegate.m */,
 				B3B1BF381B043C4C007AD6E1 /* ViewController.h */,
@@ -89,6 +105,7 @@
 				B3B1BF3E1B043C4C007AD6E1 /* Images.xcassets */,
 				B3B1BF401B043C4C007AD6E1 /* LaunchScreen.xib */,
 				B3B1BF311B043C4C007AD6E1 /* Supporting Files */,
+				B3B1BF5B1B043E84007AD6E1 /* FacebookSDK */,
 			);
 			path = FacebookOAuth;
 			sourceTree = "<group>";
@@ -118,6 +135,26 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		B3B1BF571B043D5C007AD6E1 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				B3B1BF581B043DD9007AD6E1 /* KLFacebookUtil.h */,
+				B3B1BF591B043DD9007AD6E1 /* KLFacebookUtil.m */,
+			);
+			name = OAuth;
+			sourceTree = "<group>";
+		};
+		B3B1BF5B1B043E84007AD6E1 /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B3B1BF5E1B043FC2007AD6E1 /* FBSDKLoginKit.framework */,
+				B3B1BF5F1B043FC2007AD6E1 /* FBSDKMessengerShareKit.framework */,
+				B3B1BF601B043FC2007AD6E1 /* FBSDKShareKit.framework */,
+				B3B1BF5C1B043E84007AD6E1 /* FBSDKCoreKit.framework */,
+			);
+			path = FacebookSDK;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -221,6 +258,7 @@
 			files = (
 				B3B1BF3A1B043C4C007AD6E1 /* ViewController.m in Sources */,
 				B3B1BF371B043C4C007AD6E1 /* AppDelegate.m in Sources */,
+				B3B1BF5A1B043DD9007AD6E1 /* KLFacebookUtil.m in Sources */,
 				B3B1BF341B043C4C007AD6E1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +387,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = FacebookOAuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +401,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
 				INFOPLIST_FILE = FacebookOAuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

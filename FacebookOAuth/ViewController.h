@@ -10,6 +10,16 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIButton *loginButton;
+@property (nonatomic, strong) IBOutlet UIButton *publishButton;
+
+- (IBAction)userProfile:(id)sender;
+- (IBAction)userLikesPress:(id)sender;
+- (IBAction)userLikeSpecificPage:(id)sender;
+- (IBAction)userLoginButton:(id)sender;
+- (IBAction)userPublishPermissionsButton:(id)sender;
+- (IBAction)userPostDataButton:(id)sender;
+- (IBAction)userPostCheckButton:(id)sender;
 
 @end
 
